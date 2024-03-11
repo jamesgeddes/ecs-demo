@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECS Demo</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            z-index: -1; 
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+              background-position-x: 50%;
+              background-position-y: 0px;
+            background-size: max(100%, 768px), 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 100px;
+        }
+        .hello-world {
+            text-align: center;
+            border-radius: 10px;
+            background: linear-gradient(to right, blue, orange);
+            padding: 20px;
+            box-shadow: 2px 5px 10px rgba(255, 255, 255, 0.25);
+            color: rgb(255, 255, 255);
+        }
+        h1 {
+            color: white;
+        }
+        h2 {
+            padding-top: 50px;
+            color: black;
+            text-align:center;
+            font-size: 1rem;
+        }
+        .separator {
+            width: 8.5rem;
+            height: 3px;
+            margin: 1.25rem auto;
+        }
+        table {
+          margin-left: auto;
+          margin-right: auto;
+          text-align: left;
+          width: 70%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hello-world">
+            <h1>Hello World!</h1>
+            <div class="separator"></div>
+            <p>This container is running in AWS ECS</p>
+            <p>
+
+            </p>
+        </div>
+    </div>
+<p>
+    <h2>
+        Dynamic values:
+    </h2>
+<table>
+  <tr>
+    <td>Webserver IP:</td>
+    <td>{{ webserver_ip }}</td>
+  </tr>
+  <tr>
+    <td>Container ID:</td>
+    <td>{{ container_id }}</td>
+  </tr>
+  <tr>
+    <td>Port:</td>
+    <td>{{ port }}</td>
+  </tr>
+  <tr>
+    <td>Random file:</td>
+    <td><img src="{{random_file}}" width="100" /></td>
+  </tr>
+  <tr>
+    <td>DB value:</td>
+    <td>{{ db_value }}</td>
+  </tr>
+
+</table>
+
+        </p>
+
+</body>
+</html>
+
